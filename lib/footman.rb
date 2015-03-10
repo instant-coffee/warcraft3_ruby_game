@@ -2,9 +2,8 @@
 
 class Footman < Unit
   
-  def initialize
-    @health_points = 60
-    @attack_power = 10
+  def initialize(health_points=60, attack_power=10)
+    super
   end
 
   def attack!(enemy_unit)
@@ -18,4 +17,3 @@ class Footman < Unit
 end
 
 
-# ((attack_power/2).ceil)

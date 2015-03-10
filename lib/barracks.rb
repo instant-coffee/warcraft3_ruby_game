@@ -27,9 +27,11 @@ class Barracks < Unit
 
   ###??? why does it have to be in this order to pass?
   def train_peasant
-    @gold = @gold -= 90
-    @food = @food -= 5
-    Peasant.new if can_train_peasant?
+    if can_train_peasant?
+      @gold = @gold -= 90
+      @food = @food -= 5
+      Peasant.new
+    end
   end
 
 
