@@ -8,9 +8,13 @@ class Barracks
   end
 
   def can_train_footman?
-    true
-    @gold = @gold -= 135
-    @food = @food -= 2
+    if (gold >= 135) && (food >= 2)
+      @gold = @gold -= 135
+      @food = @food -= 2
+      true
+    else
+      false
+    end
   end
 
   def train_footman
