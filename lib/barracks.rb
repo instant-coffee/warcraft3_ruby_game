@@ -1,6 +1,6 @@
 class Barracks
 
-  attr_reader :gold, :food
+  attr_accessor :gold, :food
 
   def initialize
     @gold = 1000
@@ -9,12 +9,12 @@ class Barracks
 
   def can_train_footman?
     true
+    @gold = @gold -= 135
+    @food = @food -= 2
   end
 
   def train_footman
-    @gold = @gold -= 135
-    @food = @food -= 2
-    Footman.new
+    Footman.new if can_train_footman?
   end
 
 end
