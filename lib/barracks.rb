@@ -1,10 +1,9 @@
-class Barracks
-
-  attr_accessor :gold, :food
+class Barracks < Unit
 
   def initialize
     @gold = 1000
     @food = 80
+    @health_points = 500
   end
 
 ##why does it work with a local variable??
@@ -33,6 +32,5 @@ class Barracks
     Peasant.new if can_train_peasant?
   end
 
-  
 
 end

@@ -1,8 +1,8 @@
 class Unit
 
-  attr_reader :health_points, :attack_power
-
-  def initialize(health_points, attack_power)
+  attr_accessor :gold, :food, :attack_power
+  attr_reader :health_points
+  def initialize(health_points, attack_power = 0)
     @health_points = health_points
     @attack_power = attack_power
   end
@@ -14,5 +14,6 @@ class Unit
   def damage(attack_power)
     @health_points = @health_points -= attack_power
   end
+
 
 end
