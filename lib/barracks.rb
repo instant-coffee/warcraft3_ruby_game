@@ -22,4 +22,17 @@ class Barracks
     Footman.new if can_train_footman?
   end
 
+  def can_train_peasant?
+    ((gold >= 90) && (food >= 5)) ? true : false
+  end
+
+  ###??? why does it have to be in this order to pass?
+  def train_peasant
+    @gold = @gold -= 90
+    @food = @food -= 5
+    Peasant.new if can_train_peasant?
+  end
+
+  
+
 end
