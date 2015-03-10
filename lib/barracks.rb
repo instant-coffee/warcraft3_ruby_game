@@ -7,6 +7,7 @@ class Barracks
     @food = 80
   end
 
+##why does it work with a local variable??
   def can_train_footman?
     if (gold >= 135) && (food >= 2)
       @gold = @gold -= 135
