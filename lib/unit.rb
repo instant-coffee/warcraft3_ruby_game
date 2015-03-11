@@ -9,7 +9,7 @@ class Unit
   end
 
   def attack!(enemy_unit)
-    self.dead? || enemy_unit.dead? ? false : enemy_unit.damage(attack_power)
+   self.dead? || enemy_unit.dead? ? false : enemy_unit.damage(attack_power)
   end
 
   def damage(attack_power)
